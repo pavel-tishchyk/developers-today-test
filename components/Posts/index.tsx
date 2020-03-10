@@ -27,20 +27,17 @@ const Posts: FC<Props> = (props) => {
   
   return (
     <Card.Group>
-      {postsElements}
       <Button 
-        icon circular primary
+        icon fluid primary
         onClick={addPost}
         size='massive'
         style={{
-          position: 'fixed',
-          top: 0,
-          right: 0,
-          transform: 'translate(-50%, -50%)'
+          margin: '0.5em .25em'
         }}
       >
         <Icon name='add'/>
         </Button>
+      {postsElements}
     </Card.Group>
   );
 }
