@@ -34,9 +34,9 @@ const Posts: FC<Props> = (props) => {
         size='massive'
         style={{
           position: 'fixed',
-          bottom: 0,
+          top: 0,
           right: 0,
-          transform: 'translate(-100%, -50%)'
+          transform: 'translate(-50%, -50%)'
         }}
       >
         <Icon name='add'/>
