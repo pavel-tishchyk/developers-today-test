@@ -1,9 +1,9 @@
 import axios, { AxiosResponse } from "axios";
-import { Post, PostData, CommentData } from "../types";
+import { Post, PostData, CommentData, Comment } from "../types";
 
 const instance = axios.create({
     baseURL: 'https://simple-blog-api.crew.red/',
-});
+})
 
 const apiRequests = {
   getPostsData: async (): Promise<Array<Post>> => (

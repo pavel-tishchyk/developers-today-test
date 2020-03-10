@@ -16,7 +16,8 @@ const CommentForm: FC<InjectedFormProps> = (props) => {
       <Form.Button 
         primary 
         disabled={submitting}
-        type='submit'>
+        type='submit'
+      >
         Add
       </Form.Button>
     </Form>

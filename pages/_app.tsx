@@ -7,7 +7,7 @@ import { initStore } from '../store';
 
 const App = (props) => {
   const {Component, pageProps, store}: any = props
-  console.log(store.getState())
+
   return (
     <Provider store={store}>
       <Head>
@@ -38,11 +38,10 @@ const App = (props) => {
         </Grid.Row>
       </Grid>
     </Provider>
-
   )
 }
 
-App.getInitialProps = async ({Component, ctx}) => {
+App.getInitialProps = async ({Component, ctx})=> {
   return {
     pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
   }

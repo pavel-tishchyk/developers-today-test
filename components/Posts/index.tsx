@@ -37,8 +37,9 @@ const Posts: FC<Props> = (props) => {
           bottom: 0,
           right: 0,
           transform: 'translate(-100%, -50%)'
-        }}>
-          <Icon name='add'/>
+        }}
+      >
+        <Icon name='add'/>
         </Button>
     </Card.Group>
   );

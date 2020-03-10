@@ -7,6 +7,7 @@ import { State } from '../../../reducers';
 
 const Post: FC<ReduxProps> = (props) => {
   const { postsData, getPostsTC, changePostTC } = props;
+  
   const { id } = useRouter().query;
   
   const post = postsData.find((post) => post.id === +id);

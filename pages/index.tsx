@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
-import { connect, ConnectedProps } from 'react-redux'
+import React, { FC } from 'react';
+import { connect, ConnectedProps } from 'react-redux';
 import { getPostsTC, deletePostTC, addCommentTC } from '../thunks';
 import Posts from '../components/Posts';
 import { State } from '../reducers';
 
 const IndexPage: FC<ReduxProps> = (props) => {
   const { postsData, getPostsTC, deletePostTC, addCommentTC } = props;
-  console.log(postsData)
+
   React.useEffect(()=> {
     getPostsTC();
   },[getPostsTC])

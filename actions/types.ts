@@ -31,9 +31,14 @@ interface DeletePost {
 
 interface AddComment {
   type: typeof ADD_COMMENT
-  payload: { 
+  payload: {
     comment: Comment
-  }
+  } 
 }
 
-export type Action = SetPosts | AddPost | ChangePost | DeletePost | AddComment
+export type Action 
+  = SetPosts 
+  | AddPost 
+  | ChangePost 
+  | DeletePost 
+  | AddComment

@@ -23,20 +23,22 @@ const PostCard: FC<Props> = (props) => {
         <Button.Group floated='right'>
             <Button 
               icon
-              onClick={editPost}>
-                <Icon name='pencil' />
+              onClick={editPost}
+            >
+              <Icon name='pencil' />
             </Button>
           <Button
             icon
-            onClick={() => deletePost(id)}>
-              <Icon name='delete' />
+            onClick={() => deletePost(id)}
+          >
+            <Icon name='delete' />
           </Button>
         </Button.Group>
         <Card.Header>
           {title}
         </Card.Header>
       </Card.Content>
-      <Card.Content description={body} />
+      <Card.Content description={body}/>
       <Card.Content extra >
         <Comments 
           commentsData={comments} 

@@ -16,8 +16,8 @@ const Comments: FC<Props> = (props) => {
   const commentsElements = commentsData
     .map(comment => <CommentCard key={comment.id} comment={comment}/>) 
 
-  const onSubmit = (commentData: {body: string}) => {
-    addComment({...commentData, postId})
+  const onSubmit = (commentBody: {body: string}) => {
+    addComment({...commentBody, postId})
   }
 
   return (
@@ -26,7 +26,9 @@ const Comments: FC<Props> = (props) => {
         Comments
       </Header>
       {commentsElements}
-      <CommentForm onSubmit={onSubmit} form={`comment_post_${postId}`}/>
+      <CommentForm 
+        onSubmit={onSubmit} 
+        form={`comment_post_${postId}`}/>
     </Comment.Group>
   );
 }

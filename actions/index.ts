@@ -1,5 +1,5 @@
 import { Action } from "./types";
-import { Post, CommentData } from "../types";
+import { Post, Comment } from "../types";
 
 export const SET_POSTS = 'SET_POSTS';
 export const ADD_POST = 'ADD_POST';
@@ -35,7 +35,7 @@ export const deletePost = (postId: number): Action => {
   }
 }
 
-export const addComment = (comment: Comment): any => {
+export const addComment = (comment: Comment): Action => {
   return {
       type: ADD_COMMENT,
       payload: { comment } 

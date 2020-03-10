@@ -9,7 +9,6 @@ type Props = {
   post?: Post
 } & InjectedFormProps
 
-
 const PostForm: FC<Props> = (props) => {
   const { post, handleSubmit, initialize, reset, pristine, submitting} = props;
 
@@ -54,16 +53,17 @@ const PostForm: FC<Props> = (props) => {
             floated='right' 
             disabled={pristine || submitting}
             onClick={handleSubmit} 
-            >
-              {post ? 'Save' : 'Add'}
+          >
+            {post ? 'Save' : 'Add'}
           </Button>
           <Button 
             secondary
             type='button'
             floated='right'
             disabled={submitting}
-            onClick={onCancel}>
-              Cancel
+            onClick={onCancel}
+          >
+            Cancel
           </Button>
         </Form>
       </Card.Content>
