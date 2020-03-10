@@ -4,7 +4,7 @@ import { TextArea } from 'react-semantic-redux-form';
 import { Field, reduxForm, InjectedFormProps } from 'redux-form';
 
 const CommentForm: FC<InjectedFormProps> = (props) => {
-  const { handleSubmit, submitting } = props;
+  const { handleSubmit, submitting, pristine } = props;
 
   return (
     <Form size='mini' onSubmit={handleSubmit}>
@@ -15,7 +15,7 @@ const CommentForm: FC<InjectedFormProps> = (props) => {
       </Form.Field>
       <Form.Button 
         primary 
-        disabled={submitting}
+        disabled={pristine || submitting}
         type='submit'
       >
         Add
