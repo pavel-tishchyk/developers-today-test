@@ -11,7 +11,7 @@
     "@types/axios": "^0.14.0",
     "@types/redux-form": "^8.2.2",
     "@types/redux-thunk": "^2.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "next": "9.2.2",
     "next-redux-wrapper": "^5.0.0",
     "react": "16.13.0",
